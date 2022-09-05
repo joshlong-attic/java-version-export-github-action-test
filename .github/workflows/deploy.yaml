@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: joshlong/java-version-exporter@v5
-        id: java-version-exporter
+      - uses: joshlong/java-version-exporter@v7
+        id: jve
       - name: Test
         env:
-          V: ${{ steps.run_tests.outputs.java-version-exporter.java_major_version }}
+          V: ${{ steps.run_tests.outputs.jve.java_major_version }}
         run: |
           echo $V
