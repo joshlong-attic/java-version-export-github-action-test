@@ -1,8 +1,5 @@
-name: Maven Property Evaulator Test
+name: Java Version Exporter Test
 on:
-  repository_dispatch:
-    types: [test-event]
-  create:
   push:
     branches: [main]
 jobs:
@@ -10,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: joshlong/java-version-exporter@v8
+      - uses: joshlong/java-version-exporter@v9
         id: jve
       - name: Test
         env:
