@@ -13,5 +13,5 @@ jobs:
       - uses: joshlong/java-version-exporter@v5
       - name: Test
         run: |
-          echo "JAVA_VERSION: ${"JAVA_VERSION:no version environment variable}"
-          echo "JAVA_VERSION: ${"JAVA_MAJOR_VERSION:no major version environment variable}"
+          echo "JAVA_VERSION: ${JAVA_VERSION:-no version environment variable}"
+          echo "JAVA_VERSION: ${JAVA_MAJOR_VERSION:-no major version environment variable}"
