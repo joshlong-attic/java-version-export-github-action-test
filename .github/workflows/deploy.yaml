@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: joshlong/java-version-exporter@v2
+      - uses: joshlong/java-version-exporter@v5
       - name: Test
         run: |
           echo "JAVA_VERSION: ${"JAVA_VERSION:no version environment variable}"
