@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: bootiful-podcast/bp-mode-github-action@v34
+      - uses: joshlong/maven-property-evaluator@v1
       - name: Test
         run: |
           # export PATH=$GITHUB_WORKSPACE/bin/:$PATH
