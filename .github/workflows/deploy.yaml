@@ -13,7 +13,7 @@ jobs:
         with:
           java-version: 17
 
-      - uses: joshlong/java-version-exporter@v10
+      - uses: joshlong/java-version-exporter@v11
         id: jve
 
       - name: Test
