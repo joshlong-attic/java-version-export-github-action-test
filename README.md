@@ -1,2 +1,3 @@
-# maven-property-evaluator-test
-a test for the new github action i'm trying to build
+# Java Version Exporter Test
+
+A test project to see if my Github Action correctly exports the version of the project

@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: joshlong/maven-property-evaluator@v1
+      - uses: joshlong/java-version-exporter@v2
       - name: Test
         run: |
-          # export PATH=$GITHUB_WORKSPACE/bin/:$PATH
-          echo "MAVEN EXPRESSION: ${MAVEN_EXPRESSION}"
+          echo "JAVA_VERSION: ${"JAVA_VERSION:no version environment variable}"
+          echo "JAVA_VERSION: ${"JAVA_MAJOR_VERSION:no major version environment variable}"
