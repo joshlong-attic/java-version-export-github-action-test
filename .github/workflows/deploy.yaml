@@ -1,17 +1,17 @@
 name: Maven Property Evaulator Test
 on:
   repository_dispatch:
-    types: [ test-event ]
+    types: [test-event]
   create:
   push:
-    branches: [ master ]
+    branches: [master]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: bootiful-podcast/bp-mode-github-action@v34
-      - name: Test 
+      - name: Test
         run: |
           # export PATH=$GITHUB_WORKSPACE/bin/:$PATH
           echo "MAVEN EXPRESSION: ${MAVEN_EXPRESSION}"
