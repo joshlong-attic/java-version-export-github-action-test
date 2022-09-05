@@ -11,6 +11,6 @@ jobs:
         id: jve
       - name: Test
         env:
-          V: ${{ steps.run_tests.outputs.jve.java_major_version }}
+          V: ${{ steps.jve.outputs.java_major_version }}
         run: |
           echo $V
