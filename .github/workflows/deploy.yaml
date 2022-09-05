@@ -8,16 +8,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      # - name: Set up JDK 17
-      #   uses: actions/setup-java@v1
-      #   with:
-      #     java-version: 17
-
-      - uses: joshlong/java-version-exporter@v15
+      - uses: joshlong/java-version-exporter@v16
         id: jve
 
-      - name: Test
-        env:
-          V: ${{ steps.jve.outputs.java_major_version }}
-        run: |
-          echo $V
+      - name: Set up JDK 17
+        uses: actions/setup-java@v1
+        with:
+          java-version: ${{ steps.jve.outputs.java_major_version }}
